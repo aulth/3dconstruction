@@ -72,7 +72,7 @@ const fetchData = async ()=>{
 
 export default add
 export async function getServerSideProps(context) {
-  const response = await fetch('http://localhost:3000/api/fetchall')
+  const response = await fetch('https://3dconstruction.vercel.app/api/fetchall')
   var data = await response.json();
   console.log(data)
   if (data.success) {
