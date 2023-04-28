@@ -4,7 +4,7 @@ import Projects from '@/components/Projects'
 import React, {useState} from 'react'
 import ProjectItem from '@/components/Admin/ProjectItem'
 import toast, { Toaster } from 'react-hot-toast';
-
+import Head from 'next/head'
 const add = ({allProjects}) => {
   const [togglUpdate, setTogglUpdate] = useState(false)
   const [data, setData] = useState(allProjects)
@@ -53,6 +53,12 @@ const fetchData = async ()=>{
 
   return (
     <>
+    <Head>
+        <title>Admin - 3D Constraction</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="Constraction" name="keywords" />
+        <meta content="Constarction" name="description" />
+      </Head>
       <Toaster position='top-right' />
       <Navbar />
       <AddProject fetchData={fetchData} />
