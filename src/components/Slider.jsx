@@ -25,11 +25,11 @@ const Slider = () => {
     }, [currentSlide]);
 
     return (
-        <div className="relative w-screen h-screen overflow-hidden">
+        <div className="relative w-screen md:h-screen h-80 overflow-hidden">
             {images.map((image, index) => (
                 <div
                     key={index}
-                    className={`absolute w-screen h-screen transition-opacity duration-500 ${currentSlide === index ? 'opacity-100' : 'opacity-0'
+                    className={`absolute w-screen md:h-screen h-80 transition-opacity duration-500 ${currentSlide === index ? 'opacity-100' : 'opacity-0'
                         }`}
                     style={{ backgroundImage: `url(${image})`, backgroundPosition: 'center', backgroundSize: 'cover' }}
                 />
