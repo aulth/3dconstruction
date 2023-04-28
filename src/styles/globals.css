@@ -6,6 +6,12 @@
 body{
     overflow-x:hidden;
 }
+html{
+scroll-behavior:smooth;
+}
+#mission{
+scroll-margin-top:81px;
+}
 .navbar-bg{
     background-image: radial-gradient(#242e44 4.5px, transparent 4.5px), radial-gradient(#242e44 4.5px, transparent 4.5px);
     background-size: 10px 10px;

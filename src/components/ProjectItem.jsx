@@ -21,7 +21,7 @@ const ProjectItem = ({data}) => {
     }, [currentSlide]);
 
     return (
-        <div className="bg-white rounded-lg shadow relative">
+        <div className={`bg-white rounded-lg shadow relative project ${data.completed?'completed':'ongoing'}`}>
             {/* <img src="https://demo.htmlcodex.com/1625/construction-company-website-template-free/img/service-1.jpg" className='w-full object-cover aspect-video' alt="" /> */}
             {images.map((image, index) => (
                 <img

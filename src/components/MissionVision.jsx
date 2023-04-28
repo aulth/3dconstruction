@@ -4,7 +4,7 @@ import {VscDebugBreakpointFunctionUnverified} from 'react-icons/vsc'
 const MissionVision = () => {
     return (
         <>
-            <div className="w-full flex flex-col md:flex-row gap-2 justify-center md:items-start items-center px-5 py-5">
+            <div id='mission' className="w-full flex flex-col md:flex-row gap-2 justify-center md:items-start items-center px-5 py-5">
                 <div className="w-full md:w-1/2  ">
                     <div className="flex gap-1 items-center border-b-2 border-[#E60304] ">
                         <h3 className="font-bold roboto-font text-xl text-[#E60304]">Mission</h3>

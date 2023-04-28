@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { CiLocationOn, CiMail } from 'react-icons/ci'
 import { BsPhoneVibrate } from 'react-icons/bs'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import {IoMdClose} from 'react-icons/io'
+import Link from 'next/link'
 const Navbar = () => {
+const [menuOpened, setMenuOpened] = useState(false)
+    const toggleMenu = ()=>{
+        let menu = document.querySelector('#menu');
+        if(menu.classList.contains('h-[17.1rem]')){
+            menu.classList.remove('h-[17.1rem]');
+            menu.classList.add('h-0');
+            menu.classList.add('hidden');
+            setMenuOpened(false)
+        }else{
+            menu.classList.remove('h-0');
+            menu.classList.add('h-[17.1rem]');
+            menu.classList.remove('hidden');
+            setMenuOpened(true)
+        }
+    }
     return (
         <>
             <div className="container mx-auto px-5 hidden lg:block">
@@ -30,18 +47,29 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="sticky w-screen top-0 z-10">
-                <nav className="bg-gray-900 flex justify-between items-center pl-5">
-                    <h1 className="m-0 uppercase"><img src="/images/logo.png" alt="" /></h1>
-                    <ul className="gap-4 items-center md:flex hidden uppercase">
-                        <li className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Home</li>
-                        <li className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>About</li>
-                        <li className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Services</li>
-                        <li className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Contact</li>
-                        <button className='bg-[#E60304] h-[81px] px-6  uppercase text-white'>Projects</button>
+            <div className="sticky w-screen top-0 z-20">
+                <nav className="bg-gray-900 flex justify-between items-center pl-5 ">
+                    <h1 className="m-0 uppercase"><Link href="/"><img src="/images/logo.png" alt="" /></Link></h1>
+                    <ul id='menu' className="gap-4  md:items-center md:flex md:flex-row md:bg-auto bg-gray-900  md:w-auto w-full md:static absolute top-[57px] flex flex-col items-start md:p-0 p-5 px-7 md:h-auto h-[17.1rem] duration-100 left-0 z-20 uppercase">
+                        <li>
+                            <Link href={"/"} className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Home</Link>
+                        </li>
+                        <li>
+                            <Link href={"/about"} className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>About</Link>
+                        </li>
+                        <li>
+                            <a href='#mission' className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Vision & Mission</a>
+                        </li>
+                        <li>
+                            <Link href={"/services"} className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Services</Link>
+                        </li>
+                        <li>
+                            <Link href={"/contact"} className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Contact</Link>
+                        </li>
+                        <li className='md:w-auto w-full'><Link href={"/projects"}><button className='bg-[#E60304] md:h-[81px] md:px-6 md:w-auto w-full md:text-center text-left px-2 md:py-0 py-1  uppercase text-white'>Projects</button></Link></li>
                     </ul>
-                    <button className='md:hidden block pr-5 text-3xl text-white' >
-                        <RxHamburgerMenu />
+                    <button onClick={toggleMenu} className='md:hidden block pr-5 text-3xl text-white' >
+                        {!menuOpened?<RxHamburgerMenu />:<IoMdClose />}
                     </button>
                 </nav>
             </div>
