@@ -1,27 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    overflow-x:hidden;
+}
+.navbar-bg{
+    background-image: radial-gradient(#242e44 4.5px, transparent 4.5px), radial-gradient(#242e44 4.5px, transparent 4.5px);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    background-color: #e9ecef;
+}
+.roboto-font{
+    font-family: 'Roboto', sans-serif;
+}
+.open-sans-font{
+    font-family: 'Open Sans', sans-serif;
+}
+.bg-dark-radial {
+    background: radial-gradient(circle, #B2B2B2 10%, transparent 11%),radial-gradient(circle at bottom left, #B2B2B2 5%, transparent 6%),radial-gradient(circle at bottom right, #B2B2B2 5%, transparent 6%),radial-gradient(circle at top left, #B2B2B2 5%, transparent 6%),radial-gradient(circle at top right, #B2B2B2 5%, transparent 6%);
+    background-size: 1em 1em;
+    background-color: #ffffff;
+    opacity: 1
+}
+.hex {
+    margin-top: 30px;
+    width: 104px;
+    height: 60px;
+    background-color: @color;
+    border-color: @color;
+    position: relative;
+    display: inline-block;
+}
+.hex:before {
+    content: " ";
+    width: 0; height: 0;
+    border-bottom: 30px solid;
+    border-color: inherit;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    position: absolute;
+    top: -30px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hex:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -30px;
+    border-top: 30px solid;
+    border-color: inherit;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
 }
