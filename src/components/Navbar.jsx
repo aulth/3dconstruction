@@ -17,6 +17,7 @@ const [menuOpened, setMenuOpened] = useState(false)
             menu.classList.remove('h-0');
             menu.classList.add('h-[17.1rem]');
             menu.classList.remove('hidden');
+            menu.classList.add('flex');
             setMenuOpened(true)
         }
     }
@@ -50,7 +51,7 @@ const [menuOpened, setMenuOpened] = useState(false)
             <div className="sticky w-screen top-0 z-20">
                 <nav className="bg-gray-900 flex justify-between items-center pl-5 ">
                     <h1 className="m-0 uppercase"><Link href="/"><img src="/images/logo.png" alt="" /></Link></h1>
-                    <ul id='menu' className="gap-4  md:items-center md:flex md:flex-row md:bg-auto bg-gray-900  md:w-auto w-full md:static absolute top-[57px] flex flex-col items-start md:p-0 p-5 px-7 md:h-auto h-[17.1rem] duration-100 left-0 z-20 uppercase">
+                    <ul id='menu' className="gap-4  md:items-center md:flex md:flex-row md:bg-auto bg-gray-900  md:w-auto w-full md:static absolute top-[57px] hidden flex-col items-start md:p-0 p-5 px-7 md:h-auto h-[17.1rem] duration-100 left-0 z-20 uppercase">
                         <li>
                             <Link href={"/"} className='text-white hover:text-[#E60304] duration-150 cursor-pointer'>Home</Link>
                         </li>
