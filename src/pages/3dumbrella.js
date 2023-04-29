@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import UmbrellaPage from '@/components/UmbrellaPage'
 import React from 'react'
 import Head from 'next/head'
+import Footer from '@/components/Footer'
 const Umbrella = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const Umbrella = () => {
       </Head>
     <Navbar/>
 <UmbrellaPage/>
+<Footer/>
     </>
   )
 }

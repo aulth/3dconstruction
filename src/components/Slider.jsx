@@ -34,7 +34,7 @@ const Slider = () => {
                     style={{ backgroundImage: `url(${image})`, backgroundPosition: 'center', backgroundSize: 'cover' }}
                 />
             ))}
-            <div className="h-screen w-screen absolute-top-0 bg-gray-800 opacity-80"></div>
+            <div className="h-screen w-screen absolute-top-0 bg-gray-800 opacity-50"></div>
             <div className="absolute w-[90%] m-auto inset-0 flex justify-between items-center">
                 <button onClick={handlePrevSlide} className='z-10 text-4xl rotate-180'><MdOutlineNavigateNext className='text-gray-300' /></button>
                 {headlines.map((headline, index) => (
@@ -43,7 +43,7 @@ const Slider = () => {
                         className={`flex absolute w-full px-20 flex-col  justify-center items-center transition-opacity duration-500 ${currentSlide === index ? 'opacity-100' : 'opacity-0'
                             }`}
                     >
-                        <h2 className="uppercase md:text-[62px] text-[30px] text-center text-gray-100 roboto-font font-[700] ">
+                        <h2 className="uppercase md:text-[52px] text-[25px] text-center text-gray-100 roboto-font font-[700] ">
                             {headline}
                         </h2>
                         <button className="px-5 py-3 uppercase bg-[#E60304] text-white my-2">Projects</button>

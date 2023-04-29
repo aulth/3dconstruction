@@ -1,9 +1,11 @@
 import React from 'react'
 import { IoLocationSharp } from 'react-icons/io5'
-import { MdEmail } from 'react-icons/md'
+import { MdEmail, MdOutlineFax } from 'react-icons/md'
 import { IoIosCall } from 'react-icons/io'
 import { BsFacebook } from 'react-icons/bs'
 import { AiFillTwitterCircle, AiFillInstagram } from 'react-icons/ai'
+import Link from 'next/link'
+import { TbDeviceLandlinePhone } from 'react-icons/tb'
 const Footer = () => {
     return (
         <>
@@ -12,7 +14,8 @@ const Footer = () => {
                     <a href="#">
                         <img src="/images/logo.png" alt="" />
                     </a>
-                    <p className='text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, recusandae ut. Corporis eius ad quasi sed? Cupiditate autem beatae eligendi ad omnis dicta modi similique odit, saepe, deserunt, expedita magni.</p>
+                    <p className='text-gray-300'>3D is one of the fastest growing group in UAE with specialization in construction,
+                        MEP, carpentry, aluminium, glass and real estate services.</p>
                     <ul className="flex flex-col gap-2 text-gray-300">
                         <li>
                             <a className="flex items-start gap-1">
@@ -22,6 +25,16 @@ const Footer = () => {
                         <li>
                             <a href='tel:+971565301894' className="flex items-start gap-1">
                                 <IoIosCall className='shrink-0 mt-1.5' /> +971565301894
+                            </a>
+                        </li>
+                        <li>
+                            <a href='tel:+971-42990922 ' className="flex items-start gap-1">
+                                <TbDeviceLandlinePhone className='shrink-0 mt-1.5' /> +971-42990922
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#' className="flex items-start gap-1">
+                                <MdOutlineFax className='shrink-0 mt-1.5' /> +971-42966499
                             </a>
                         </li>
                         <li>
@@ -48,39 +61,39 @@ const Footer = () => {
                             <h3 className="font-bold roboto-font uppercase text-gray-300 text-lg">Quick Links</h3>
                             <ul className="flex flex-col gap-2 text-gray-300 mt-1">
                                 <li>
-                                    <a href="#" className="flex items-start gap-1">
+                                    <Link href="/about" className="flex items-start gap-1 hover:text-[#E60304]">
                                         About
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-start gap-1">
-                                        About
-                                    </a>
+                                    <Link href="/contact" className="flex items-start gap-1 hover:text-[#E60304]">
+                                        Contact
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-start gap-1">
-                                        About
-                                    </a>
+                                    <Link href="/3dumbrella" className="flex items-start gap-1 hover:text-[#E60304]">
+                                        3D Umbrella
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                         <div className="w-full md:w-1/2">
-                            <h3 className="font-bold roboto-font uppercase text-gray-300 text-lg">Popular Links</h3>
+                            <h3 className="font-bold roboto-font uppercase text-gray-300 text-lg">Actual Links</h3>
                             <ul className="flex flex-col gap-2 text-gray-300 mt-1">
                                 <li>
-                                    <a href="#" className="flex items-start gap-1">
-                                        About
-                                    </a>
+                                    <Link href="/services" className="flex items-start gap-1 hover:text-[#E60304]">
+                                        Services
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-start gap-1">
-                                        About
-                                    </a>
+                                    <Link href="/projects/completed" className="flex items-start gap-1 hover:text-[#E60304]">
+                                        Completed Projects
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="flex items-start gap-1">
-                                        About
-                                    </a>
+                                    <Link href="/projects/ongoing" className="flex items-start gap-1 hover:text-[#E60304]">
+                                        Ongoing Project
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

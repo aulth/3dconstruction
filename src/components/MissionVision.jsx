@@ -1,11 +1,44 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { SlTarget } from 'react-icons/sl'
 import {VscDebugBreakpointFunctionUnverified} from 'react-icons/vsc'
+import '@animxyz/core'
+
 const MissionVision = () => {
+      
+useEffect(() => {
+    if(typeof window!=undefined){
+      const mission = document.querySelector('#mission-sec');
+      const vision = document.querySelector('#vision-sec');
+      const missionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  // Element is in the window view
+                  mission.classList.add('xyz-in')
+              } else {
+                  // Element is not in the window view
+                  mission.classList.remove('xyz-in')
+              }
+          });
+      });
+      const visionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Element is in the window view
+                vision.classList.add('xyz-in')
+            } else {
+                // Element is not in the window view
+                vision.classList.remove('xyz-in')
+            }
+        });
+    });
+      missionObserver.observe(mission);
+      visionObserver.observe(vision);
+    }
+  }, [])
     return (
         <>
             <div id='mission' className="w-full flex flex-col md:flex-row gap-2 justify-center md:items-start items-center px-5 py-5">
-                <div className="w-full md:w-1/2  ">
+                <div id='mission-sec' className="w-full md:w-1/2 " xyz="fade down">
                     <div className="flex gap-1 items-center border-b-2 border-[#E60304] ">
                         <h3 className="font-bold roboto-font text-xl text-[#E60304]">Mission</h3>
                         <img src="https://img.icons8.com/windows/32/null/goal.png" className='w-6' alt="" />
@@ -21,7 +54,7 @@ const MissionVision = () => {
                             achieving optimised returns on their projects.</li>
                     </ul>
                 </div>
-                <div className="w-full md:w-1/2  md:mt-0 mt-5 ">
+                <div  id='vision-sec'  className="w-full md:w-1/2  md:mt-0 mt-5 "  xyz="fade down">
                     <div className="flex gap-1 items-center border-b-2 border-[#E60304] ">
                         <h3 className="font-bold roboto-font text-xl text-[#E60304]">Vision</h3>
                         <img src="https://img.icons8.com/ios-glyphs/30/null/vision.png" className='w-6' alt="" />

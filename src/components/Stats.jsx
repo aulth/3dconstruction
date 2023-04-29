@@ -13,9 +13,9 @@ const Stats = () => {
                         let employee = document.querySelector('#employee')
                         let completed = document.querySelector('#completed')
                         let ongoing = document.querySelector('#ongoing')
-                        updateNumber(employee, 100, 1);
-                        updateNumber(completed, 240, 1);
-                        updateNumber(ongoing, 21, 1);
+                        updateNumber(employee, 600, 1);
+                        updateNumber(completed, 42, 1);
+                        updateNumber(ongoing, 12, 1);
                     } else {
                         // Element is not in the window view
                     }

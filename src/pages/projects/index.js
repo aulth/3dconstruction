@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import Projects from '@/components/Projects'
 import React from 'react'
 import Head from 'next/head'
+import Footer from '@/components/Footer'
 const projectspage = ({data}) => {
   return (
     <>
@@ -18,6 +19,7 @@ const projectspage = ({data}) => {
     {
       !data && <p>No Project Found</p>
     }
+    <Footer/>
     </>
   )
 }
