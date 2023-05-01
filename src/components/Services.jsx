@@ -213,6 +213,7 @@ Our real estate management supervision services are designed to help you manage 
             </div>
           </li>
         </ul>
+        <a href='/3dprofile.pdf' download={true} className="px-3 py-1 bg-[#007EF6] text-white text-center">Download 3D Profile</a>
       </div>
     </>
   )
