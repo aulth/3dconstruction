@@ -77,7 +77,7 @@ const AddProject = ({fetchData}) => {
                     </div>
                     <div className="w-full flex flex-col md:flex-row md:gap-5 items-start">
                         <div className='font-bold roboto-font md:w-32 flex items-center gap-1'>Images: {loading && <Spinner/>}</div>
-                        <input type="file" multiple onChange={uploadFile} required/>
+                        <input type="file" className='md:-ml-4' multiple onChange={uploadFile} required/>
                     </div>
                     <div className="w-full flex flex-col md:flex-row md:gap-5 items-start">
                         <span className='font-bold roboto-font md:w-32'>Completed: </span>

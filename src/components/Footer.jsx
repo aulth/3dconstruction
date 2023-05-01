@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="w-full flex gap-4 flex-col md:flex-row p-5 bg-gray-900">
                 <div className="w-full flex gap-4 flex-col md:w-1/2">
                     <a href="#">
-                        <img src="/images/logo.png" alt="" />
+                        <img src="/images/logo.png" className='w-20' alt="" />
                     </a>
                     <p className='text-gray-300'>3D is one of the fastest growing group in UAE with specialization in construction,
                         MEP, carpentry, aluminium, glass and real estate services.</p>
