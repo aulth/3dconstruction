@@ -8,10 +8,14 @@ const projectspage = ({data}) => {
   return (
     <>
     <Head>
-        <title>Completed Projects - 3D Constraction</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="Constraction" name="keywords" />
-        <meta content="Constarction" name="description" />
+        <title>Ongoing Projects - 3D Constraction LLC</title>
+        <meta name="title" content={"Ongoing Projects - 3D Constraction LLC"} />
+        <meta name="description" content={"Explore all our ongoing projects "} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`http://www.3dconstractionllc.com/ongoing/completed/`} />
+        <meta property="og:title" content={"Completed Projects - 3D Constraction LLC"} />
+        <meta property="og:description" content={"Explore all our ongoing projects"} />
+        <meta property="og:image" content="/images/ongoing.jpg" />
       </Head>
     <Navbar/>
     {
@@ -29,14 +33,12 @@ export default projectspage
 export async function getServerSideProps(context) {
   const response = await fetch('https://3dconstruction.vercel.app/api/fetchall')
   var data = await response.json();
-  console.log(data)
   if (data.success) {
     data = data.projects;
-    data = data.filter((item=>item.completed))
+    data = data.filter((item=>!item.completed))
   } else {
     data = "";
   }
-  console.log(data);
   return {
     props: {
       data: data

@@ -28,13 +28,11 @@ export default projectspage
 export async function getServerSideProps(context) {
   const response = await fetch('https://3dconstruction.vercel.app/api/fetchall')
   var data = await response.json();
-  console.log(data)
   if (data.success) {
     data = data.projects;
   } else {
     data = "";
   }
-  console.log(data);
   return {
     props: {
       data: data

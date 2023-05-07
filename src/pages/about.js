@@ -9,8 +9,7 @@ const about = () => {
     <Head>
         <title>About - 3D Constraction</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="Constraction" name="keywords" />
-        <meta content="Constarction" name="description" />
+        <meta content="Discover our story and mission at our About Us page. Learn more about our team, services, and values. Join us in making a positive impact!" name="description" />
       </Head>
     <Navbar/>
     <AboutUs/>

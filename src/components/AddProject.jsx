@@ -9,7 +9,6 @@ const AddProject = ({fetchData}) => {
     const handleOnChange = (e) => {
         e.preventDefault();
         setData({ ...data, [e.target.name]: e.target.value });
-        console.log(data)
     }
     const uploadFile = async (e) => {
         e.preventDefault();
@@ -29,7 +28,6 @@ const AddProject = ({fetchData}) => {
                 images.push(responseData.url)
             }
             setLoading(false)
-            console.log(images);
             setData({...data, images:images})
             images=[];
         }
@@ -47,7 +45,6 @@ const AddProject = ({fetchData}) => {
             setAdding(false)
             return;
         }
-        console.log(data)
         const response = await fetch('/api/addproject', {
             method: 'POST',
             headers: {

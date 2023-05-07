@@ -12,7 +12,6 @@ useEffect(() => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // Element is in the window view
-                console.log('Element is in the window view');
                 aboutText.classList.add('xyz-in')
                 aboutImage.classList.add('xyz-in')
             } else {

@@ -16,10 +16,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>3D Constraction</title>
+        <title>3D Constraction LLC</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="Constraction" name="keywords" />
-        <meta content="Constarction" name="description" />
+        <meta content="3D Constraction: A leading construction company with expertise in commercial and residential projects. Specializing in MEP, metal, and wooden work." name="description" />
       </Head>
       <Navbar />
       <Slider />

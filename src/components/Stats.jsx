@@ -9,7 +9,6 @@ const Stats = () => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         // Element is in the window view
-                        console.log('Element is in the window view');
                         let employee = document.querySelector('#employee')
                         let completed = document.querySelector('#completed')
                         let ongoing = document.querySelector('#ongoing')
