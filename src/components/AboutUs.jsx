@@ -23,10 +23,6 @@ const AboutUs = () => {
         </p>
         <br />
         <p className="open-sans-font text-justify">
-          Today, we have over 42 iconic projects completed and over 600 people on our team. We know we have made a mark. But our goal is to shape the future, and a goal like that is an evolving process. This is just the beginning.
-        </p>
-        <br />
-        <p className="open-sans-font text-justify">
           Today, we have over 42 iconic projects completed and over 500 people on our team. We know we have made a mark. But our goal is to shape the future, and a goal like that is an evolving process. This is just the beginning.
         </p>
         <h3 className="font-bold roboto-font uppercasee text-center text-xl border-b pb-2 mt-4">Final Word</h3>

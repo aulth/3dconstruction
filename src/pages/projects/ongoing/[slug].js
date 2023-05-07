@@ -6,6 +6,8 @@ import { MdOutlineNavigateNext } from 'react-icons/md'
 import { AiOutlineShareAlt } from 'react-icons/ai'
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import {IoMdClose} from 'react-icons/io'
+
 const settings = {
     dots: false,
     infinite: true,
@@ -31,7 +33,7 @@ const ProductPage = ({ data }) => {
             slider.slickPrev();
         }
     };
-    const images = data.images
+    const images = data?.images
     const handleClick = async () => {
         try {
             await navigator.share({ title: data.project, url: `http://www.3dconstractionllc.com/projects/ongoing/${data._id}` });
@@ -59,7 +61,7 @@ const ProductPage = ({ data }) => {
             {
                 data &&
                 <div className="w-screen h-screen bg-[#393939] overflow-y-hidden">
-                    <div className="w-full p-5 flex bg-[#1d1c1c] text-white z-20">
+                    <div className="w-full p-5 flex items-center bg-[#1d1c1c] text-white z-20">
                         <div className="w-full flex items-center flex-wrap">
                             <h2 className="roboto-font font-bold">{data.project} </h2>
                             <span className='mx-2'>-</span>
@@ -67,9 +69,9 @@ const ProductPage = ({ data }) => {
                             <span className='mx-2'>-</span>
                             <h4 className="open-sans-font">{data.consultant}</h4>
                         </div>
-                        <div className="flex md:item-start items-end">
-                            <AiOutlineShareAlt onClick={handleClick} />
-                        </div>
+                        <div className="flex md:items-center items-end">
+                        <IoMdClose className='cursor-pointer' onClick={()=>{router.push('/projects/ongoing')}}/>
+                    </div>
                     </div>
                     <div className="w-screen flex items-center  h-[calc(100vh-112px)] md:h-[calc(100vh-64px)]">
                         <div className="w-full ">
@@ -96,6 +98,9 @@ const ProductPage = ({ data }) => {
                             </div>
                         </div>
                     </div>
+                    <button onClick={handleClick} className="p-2 fixed bottom-2 right-2 flex justify-center items-center bg-gray-950 text-white rounded-full">
+                <AiOutlineShareAlt className='' />
+                </button>
                 </div>
             }
         </>

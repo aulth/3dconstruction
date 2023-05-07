@@ -9,8 +9,8 @@ const Umbrella = () => {
     <Head>
         <title>3D Umbrella - 3D Constraction</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="Constraction" name="keywords" />
-        <meta content="Constarction" name="description" />
+        <meta content="Our umbrella consists of the 3D Constraction LLC 3D Aluminum and Metal Works and 3D Real Estate vectors
+" name="description" />
       </Head>
     <Navbar/>
 <UmbrellaPage/>

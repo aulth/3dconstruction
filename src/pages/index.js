@@ -19,6 +19,8 @@ export default function Home() {
         <title>3D Constraction LLC</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="3D Constraction: A leading construction company with expertise in commercial and residential projects. Specializing in MEP, metal, and wooden work." name="description" />
+        <link rel="icon" href="/favicon.ico" />
+
       </Head>
       <Navbar />
       <Slider />
