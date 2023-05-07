@@ -20,7 +20,7 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="3D Constraction: A leading construction company with expertise in commercial and residential projects. Specializing in MEP, metal, and wooden work." name="description" />
         <link rel="icon" href="/favicon.ico" />
-
+        <meta name="google-site-verification" content="u0t-4eiO9ZpatxsIJjjKLB7m50thQq3PLb-ERifJ_xs" />
       </Head>
       <Navbar />
       <Slider />
