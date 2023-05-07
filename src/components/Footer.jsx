@@ -3,7 +3,7 @@ import { IoLocationSharp } from 'react-icons/io5'
 import { MdEmail, MdOutlineFax } from 'react-icons/md'
 import { IoIosCall } from 'react-icons/io'
 import { BsFacebook } from 'react-icons/bs'
-import { AiFillTwitterCircle, AiFillInstagram } from 'react-icons/ai'
+import { AiFillTwitterCircle, AiFillInstagram , AiFillLinkedin} from 'react-icons/ai'
 import Link from 'next/link'
 import { TbDeviceLandlinePhone } from 'react-icons/tb'
 const Footer = () => {
@@ -18,23 +18,23 @@ const Footer = () => {
                         MEP, carpentry, aluminium, glass and real estate services.</p>
                     <ul className="flex flex-col gap-2 text-gray-300">
                         <li>
-                            <a className="flex items-start gap-1">
-                                <IoLocationSharp className='shrink-0 mt-1.5' /> Dubai
+                            <a href="https://goo.gl/maps/arxRfnbcY5eMcuaf9" rel='nofollow' className="flex items-start gap-1">
+                                <IoLocationSharp className='shrink-0 mt-1.5' /> Office 918, Business Village Block B Port Saeed, Dubai
                             </a>
                         </li>
                         <li>
-                            <a href='tel:+971565301894' className="flex items-start gap-1">
-                                <IoIosCall className='shrink-0 mt-1.5' /> +971565301894
+                            <a href='tel:+971521675135' className="flex items-start gap-1">
+                                <IoIosCall className='shrink-0 mt-1.5' /> +971521675135
                             </a>
                         </li>
                         <li>
-                            <a href='tel:+971-42990922 ' className="flex items-start gap-1">
-                                <TbDeviceLandlinePhone className='shrink-0 mt-1.5' /> +971-42990922
+                            <a href='tel:+971521675135 ' className="flex items-start gap-1">
+                                <TbDeviceLandlinePhone className='shrink-0 mt-1.5' /> +971521675135
                             </a>
                         </li>
                         <li>
                             <a href='#' className="flex items-start gap-1">
-                                <MdOutlineFax className='shrink-0 mt-1.5' /> +971-42966499
+                                <MdOutlineFax className='shrink-0 mt-1.5' /> +971521675135
                             </a>
                         </li>
                         <li>
@@ -45,13 +45,13 @@ const Footer = () => {
                     </ul>
                     <ul className="flex flex-wrap gap-2">
                         <li className="flex items-center">
-                            <BsFacebook className='text-[#007EF6] text-2xl' />
+                           <a href="https://www.facebook.com/3dconstractionllc/" rel='nofollow'> <BsFacebook className='text-[#007EF6] text-2xl' /></a>
                         </li>
                         <li className="flex items-center">
-                            <AiFillTwitterCircle className='text-[#007EF6] text-3xl' />
+                            <a href="#"><AiFillInstagram className='text-[#007EF6] text-3xl' /></a>
                         </li>
                         <li className="flex items-center">
-                            <AiFillInstagram className='text-[#007EF6] text-3xl' />
+                            <a href="https://www.linkedin.com/company/3d-constraction-llc" rel='nofollow'><AiFillLinkedin className='text-[#007EF6] text-3xl' /></a>
                         </li>
                     </ul>
                 </div>

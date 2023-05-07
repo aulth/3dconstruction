@@ -36,7 +36,7 @@ useEffect(() => {
                         we are always looking to place our customers and get their confidence through
                         timely completion of our work and high quality experience resulting from the
                         accumulation of experience.</p>
-                    <ul class="grid grid-cols-2 gap-4  open-sans-font">
+                    <ul className="grid grid-cols-2 gap-4  open-sans-font">
                         <li className='flex items-start  gap-1'><GoCheck className='text-[#E60304] text-lg mt-1 shrink-0' />Schedule and resource plan to meet client objectives</li>
                         <li className='flex items-start  gap-1'><GoCheck className='text-[#E60304] text-lg mt-1 shrink-0' />Clear communication with project stakeholders</li>
                         <li className='flex items-start  gap-1'><GoCheck className='text-[#E60304] text-lg mt-1 shrink-0' />Track project progress and adjust as needed</li>

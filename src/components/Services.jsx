@@ -15,25 +15,20 @@ const Services = () => {
             <div className="w-full flex flex-col-reverse md:flex-row">
               <div className="w-full flex flex-col md:w-[65%]">
                 <p className="open-sans-font mt-4 text-justify">
-                  3D Constraction is a core construction company with in-house MEP and
-                  Wooden Work registering success in various projects comprises of commercial
-                  buildings, warehouses, shops, stores, cafes, restaurants, residential buildings
-                  OUR SERVICES
-                  includes villas, hotels, hospitals, mosques are our gamut of services covering the
-                  entire spectrum.
+                3D Constraction is a core construction company with in-house MEP and Wooden Work registering success in various projects comprises of commercial buildings, warehouses, shops, stores, cafes, restaurants, residential buildings, villas, hotels, hospitals, mosques are our gamut of services covering the entire spectrum.
                 </p>
                 <br />
                 <p className="open-sans-font text-justify">
-                  3D Constraction LLC has an unlimited license, the resources and skill set
-                  necessary to advise on reining the engineering aspects of projects in order to
-                  deliver significant technical and commercial benefits. To deliver this approach
-                  we have the support of a full range of a-listed specialists in the field of
-                  construction.
+                3D Constraction LLC has an unlimited license, the resources and skill set necessary to advise on reining the engineering aspects of projects in order to deliver significant technical and commercial benefits. To deliver this approach we have the support of a full range of a-listed specialists in the field of construction.
                 </p>
-
+                <br />
+                <p className="open-sans-font text-justify">
+                We are fully licensed to work on high-rise construction projects in the UAE. Our team has the experience and expertise to support a comprehensive range of projects in these areas.
+At 3D, we voluntarily deploy a value-engineering approach to meet the needs of clients, led by an in-house team of dedicated professionals. Our review-and-analysis approach ensures that project plans are fully realizable; maximising opportunities for cost control while at the same time ensuring that projects are delivered on time and to the specified standards.
+                </p>
               </div>
               <div className="w-full flex justify-center md:w-[35%]">
-                <img src="https://img.icons8.com/fluency/512/null/road-worker.png" className='w-1/2' alt="" />
+                <img src="/images/contract.jpg" className='w-[70%] object-contain' alt="" />
               </div>
             </div>
           </li>
@@ -70,11 +65,11 @@ const Services = () => {
                 </ul>
               </div>
               <div className="w-full flex justify-center md:w-[35%]">
-                <img src="https://img.icons8.com/3d-fluency/512/null/electricity.png" className='w-1/2' alt="" />
+                <img src="/images/electric.jpg" className='w-[60%]' alt="" />
               </div>
             </div>
           </li>
-          <li>
+          <li className='md:-mb-10'>
             <h2 className='border-b-2 border-[#E60304] sticky md:top-[81px] top-[57px] bg-white pt-[9px] flex items-center'>
               <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 3. Air-Conditioning Services</span>
             </h2>
@@ -98,7 +93,7 @@ const Services = () => {
                 </ul>
               </div>
               <div className="w-full flex justify-center md:w-[35%]">
-                <img src="https://img.icons8.com/fluency/512/null/air-conditioner.png" className='w-[40%]' alt="" />
+                <img src="/images/ac.jpg" className='w-[65%]' alt="" />
               </div>
             </div>
           </li>
@@ -147,11 +142,11 @@ const Services = () => {
                 </ul>
               </div>
               <div className="w-full flex justify-center md:w-[35%]">
-                <img src="https://img.icons8.com/3d-fluency/512/null/plumbing.png" className='w-1/2' alt="" />
+                <img src="/images/plumber.jpg" className='md:w-[80%] w-3/4 object-contain' alt="" />
               </div>
             </div>
           </li>
-          <li>
+          <li className='md:-mb-10'>
             <h2 className='border-b-2 border-[#E60304] sticky md:top-[81px] top-[57px] bg-white pt-[9px] flex items-center'>
               <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 5. Interior Design</span>
             </h2>
@@ -162,11 +157,11 @@ const Services = () => {
                 </p>
               </div>
               <div className="w-full flex justify-center md:w-[35%] my-4">
-                <img src="https://img.icons8.com/external-ddara-lineal-color-ddara/512/null/external-interior-design-furniture-ddara-lineal-color-ddara.png" className='w-1/3' alt="" />
+                <img src="/images/interior.jpg" className='md:w-[45%] w-3/4 object-contain' alt="" />
               </div>
             </div>
           </li>
-          <li>
+          <li className='md:-mb-8'>
             <h2 className='border-b-2 border-[#E60304] sticky md:top-[81px] top-[57px] bg-white pt-[9px] flex items-center'>
               <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 6. Metal & Iron Works</span>
             </h2>
@@ -177,11 +172,11 @@ const Services = () => {
                 </p>
               </div>
               <div className="w-full flex justify-center md:w-[35%] my-4">
-                <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/512/null/external-welding-building-and-construction-flatart-icons-outline-flatarticons.png" className='w-1/3' alt="" />
+                <img src="/images/metal.jpg" className='w-1/2 object-contain' alt="" />
               </div>
             </div>
           </li>
-          <li>
+          <li className='md:-mb-10'>
             <h2 className='border-b-2 border-[#E60304] sticky md:top-[81px] top-[57px] bg-white pt-[9px] flex items-center'>
               <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 7.  Real Estate Management Supervision Services</span>
             </h2>
@@ -192,7 +187,7 @@ Our real estate management supervision services are designed to help you manage 
                 </p>
               </div>
               <div className="w-full flex justify-center md:w-[35%] my-4">
-                <img src="https://img.icons8.com/ultraviolet/512/null/real-estate.png" className='w-1/3' alt="" />
+                <img src="/images/rem.jpg" className='md:w-1/2 w-3/4 object-contain' alt="" />
               </div>
             </div>
           </li>
@@ -208,7 +203,7 @@ Our real estate management supervision services are designed to help you manage 
                 </p>
               </div>
               <div className="w-full flex justify-center md:w-[35%] my-4">
-                <img src="https://img.icons8.com/ios/512/null/real-estate-agent.png" className='w-1/3' alt="" />
+                <img src="/images/brokerage.jpg" className='md:w-1/2 w-3/4' alt="" />
               </div>
             </div>
           </li>
