@@ -26,7 +26,7 @@ const projectspage = ({data}) => {
 
 export default projectspage
 export async function getServerSideProps(context) {
-  const response = await fetch('https://3dconstruction.vercel.app/api/fetchall')
+  const response = await fetch('http://www.3dconstractionllc.com/api/fetchall')
   var data = await response.json();
   if (data.success) {
     data = data.projects;
