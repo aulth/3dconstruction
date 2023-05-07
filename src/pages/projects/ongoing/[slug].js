@@ -17,7 +17,7 @@ const settings = {
     autoplay: true,
     autoplaySpeed: 3000,
 };
-const ProductPage = ({ data }) => {
+const ProductPage = ({ data, thumbnail }) => {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [slider, setSlider] = useState(null);
@@ -45,19 +45,19 @@ const ProductPage = ({ data }) => {
     return (
         <>
             <Head>
-                <title>{data.project ? data.project : "Project Not Found"}</title>
-                <meta name="title" content={data.project ? data.project : 'Not Found'} />
-                <meta name="description" content={data.area ? data.area : 'Not Found'} />
+                <title>{data?.project ? data.project : "Project Not Found"}</title>
+                <meta name="title" content={data?.project ? data.project : 'Not Found'} />
+                <meta name="description" content={data?.area ? data.area : 'Not Found'} />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`http://www.3dconstractionllc.com/projects/ongoing/${data._id?data._id:''}`} />
-                <meta property="og:title" content={data.project ? data.project : "Project Not Found"} />
-                <meta property="og:description" content={data.area ? data.area : 'Not Found'} />
-                <meta property="og:image" content={data?.images[0]} />
+                <meta property="og:url" content={`http://www.3dconstractionllc.com/projects/ongoing/${data?._id?data._id:''}`} />
+                <meta property="og:title" content={data?.project ? data.project : "Project Not Found"} />
+                <meta property="og:description" content={data?.area ? data.area : 'Not Found'} />
+                <meta property="og:image" content={thumbnail?thumbnail:''} />
             </Head>
             {
-                !data &&
-                router.push('/404')
-            }
+            !data &&
+            <div className="w-full flex h-screen justify-center items-center">Project Not Found</div>
+        }
             {
                 data &&
                 <div className="w-screen h-screen bg-[#393939] overflow-y-hidden">
@@ -118,14 +118,18 @@ export async function getServerSideProps(context) {
         body: JSON.stringify({ id: slug })
     })
     var data = await response.json();
+    let thumbnail;
     if (data.success) {
         data = data.project;
+        thumbnail = data.images[0];
+        console.log(thumbnail)
     } else {
         data = null;
     }
     return {
         props: {
-            data: data
+            data: data,
+            thumbnail:thumbnail
         }, // will be passed to the page component as props
     }
 }
