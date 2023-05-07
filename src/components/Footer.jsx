@@ -29,12 +29,12 @@ const Footer = () => {
                         </li>
                         <li>
                             <a href='tel:+971521675135 ' className="flex items-start gap-1">
-                                <TbDeviceLandlinePhone className='shrink-0 mt-1.5' /> +971521675135
+                                <TbDeviceLandlinePhone className='shrink-0 mt-1.5' /> +971-42990922
                             </a>
                         </li>
                         <li>
                             <a href='#' className="flex items-start gap-1">
-                                <MdOutlineFax className='shrink-0 mt-1.5' /> +971521675135
+                                <MdOutlineFax className='shrink-0 mt-1.5' /> +971-42966499
                             </a>
                         </li>
                         <li>

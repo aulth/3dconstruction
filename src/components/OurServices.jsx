@@ -3,7 +3,7 @@ import { BsFillBuildingsFill } from 'react-icons/bs'
 import { MdOutlineElectricalServices, MdOutlinePlumbing, MdOutlineRealEstateAgent } from 'react-icons/md'
 import { RiToolsFill } from 'react-icons/ri'
 import { AiFillFormatPainter } from 'react-icons/ai'
-import { GiSteelClaws } from 'react-icons/gi'
+import { GiSteelClaws , GiMirrorMirror} from 'react-icons/gi'
 import { SiHandshake } from 'react-icons/si'
 import '@animxyz/core'
 
@@ -41,7 +41,7 @@ const OurServices = () => {
                         </div>
                     </div>
                     <div className="bg-white rounded-lg shadow xyz-nested ">
-                        <img src="https://images.unsplash.com/photo-1520234939602-6b957f8b9c1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className='w-full object-cover aspect-video' alt="" />
+                        <img src="/images/service/e.jpg" className='w-full object-cover aspect-video' alt="" />
                         <div className="w-full flex flex-col items-center justify-center p-5">
                             <div className="w-16 h-16 rounded-full bg-white -mt-[3.1rem] flex justify-center items-center">
                                 <MdOutlineElectricalServices className='text-4xl  text-[#E60304]' />
@@ -62,7 +62,7 @@ const OurServices = () => {
                         </div>
                     </div>
                     <div className="bg-white rounded-lg shadow xyz-nested ">
-                        <img src="https://plus.unsplash.com/premium_photo-1663045495725-89f23b57cfc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className='w-full object-cover aspect-video' alt="" />
+                        <img src="/images/service/pb.jpg" className='w-full object-cover aspect-video' alt="" />
                         <div className="w-full flex flex-col items-center justify-center p-5">
                             <div className="w-16 h-16 rounded-full bg-white -mt-[3.1rem] flex justify-center items-center">
                                 <MdOutlinePlumbing className='text-4xl text-[#E60304]' />
@@ -72,7 +72,7 @@ const OurServices = () => {
                         </div>
                     </div>
                     <div className="bg-white rounded-lg shadow xyz-nested ">
-                        <img src="https://demo.htmlcodex.com/1625/construction-company-website-template-free/img/service-4.jpg" className='w-full object-cover aspect-video' alt="" />
+                        <img src="/images/service/id.jpg" className='w-full object-cover aspect-video' alt="" />
                         <div className="w-full flex flex-col items-center justify-center p-5">
                             <div className="w-16 h-16 rounded-full bg-white -mt-[3.1rem] flex justify-center items-center">
                                 <AiFillFormatPainter className='text-4xl text-[#E60304]' />
@@ -89,6 +89,16 @@ const OurServices = () => {
                             </div>
                             <h4 className="font-semibold roboto-font uppercase text-[#007EF6] text-center">Metal & Iron Works</h4>
                             <p className="text-gray-500 text-center">Create custom and durable metal and iron products for your commercial and residential projects with our metal and iron works service.</p>
+                        </div>
+                    </div>
+                    <div className="bg-white rounded-lg shadow xyz-nested ">
+                        <img src="/images/service/gw.jpg" className='w-full object-cover aspect-video' alt="" />
+                        <div className="w-full flex flex-col items-center justify-center p-5">
+                            <div className="w-16 h-16 rounded-full bg-white -mt-[3.1rem] flex justify-center items-center">
+                                <GiMirrorMirror className='text-4xl text-[#E60304]' />
+                            </div>
+                            <h4 className="font-semibold roboto-font uppercase text-[#007EF6] text-center"> Glass Works</h4>
+                            <p className="text-gray-500 text-center">We provide aluminum, glass, and sheer curtain products and services for homes and buildings in Dubai, including high-quality solutions for commercial projects, by expert teams.</p>
                         </div>
                     </div>
                     <div className="bg-white rounded-lg shadow xyz-nested ">
@@ -111,6 +121,7 @@ const OurServices = () => {
                             <p className="text-gray-500 text-center">Navigate the real estate market with confidence with our buying and selling brokerage services, backed by industry expertise.</p>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 

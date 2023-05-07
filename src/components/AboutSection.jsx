@@ -45,7 +45,7 @@ useEffect(() => {
                     </ul>
                 </div>
                 <div  id='about-image'  className="flex flex-col w-[90%] md:w-[40%] md:h-[420px] h-[200px] bg-dark-radial md:mt-0 mt-10" xyz="fade left" >
-                    <img src="https://demo.htmlcodex.com/1625/construction-company-website-template-free/img/about.jpg" className='h-full mt-5 -ml-5 object-cover' alt="" />
+                    <img src="/images/main-page.jpg" className='h-full mt-5 -ml-5 object-cover' alt="" />
                 </div>
             </div>
 

@@ -3,7 +3,7 @@ import Spinner from './Spinner';
 import toast, { Toaster } from 'react-hot-toast';
 
 const AddProject = ({fetchData}) => {
-    const [data, setData] = useState({ project: '', area: '', consultant: '', completed:true, images:[] })
+    const [data, setData] = useState({ project: '', area: '', consultant: '', completed:undefined, images:[] })
     const [loading, setLoading] = useState(false)
     const [adding, setAdding] = useState(false)
     const handleOnChange = (e) => {
@@ -42,6 +42,12 @@ const AddProject = ({fetchData}) => {
             setAdding(false)
             return;
         }
+        if(data.completed==undefined){
+            toast.error("Select status");
+            setAdding(false)
+            return;
+        }
+        console.log(data)
         const response = await fetch('/api/addproject', {
             method: 'POST',
             headers: {
@@ -56,6 +62,7 @@ const AddProject = ({fetchData}) => {
         } else {
             toast.error(json.msg)
         }
+        setData({ project: '', area: '', consultant: '', completed:data.completed, images:[] })
         setAdding(false);
       }
     return (
@@ -65,15 +72,15 @@ const AddProject = ({fetchData}) => {
                 <form onSubmit={handleOnUpload} className='container flex flex-col gap-4 m-auto'>
                     <div className="w-full flex flex-col md:flex-row md:gap-5 items-start justify-center">
                         <span className='font-bold roboto-font md:w-32'>Project: </span>
-                        <input type="text" onChange={handleOnChange} name='project' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1' />
+                        <input type="text" value={data.project} onChange={handleOnChange} name='project' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1' />
                     </div>
                     <div className="w-full flex flex-col md:flex-row md:gap-5 items-start">
                         <span className='font-bold roboto-font md:w-32'>Area: </span>
-                        <input type="text" onChange={handleOnChange} name='area' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1' />
+                        <input type="text" value={data.area} onChange={handleOnChange} name='area' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1' />
                     </div>
                     <div className="w-full flex flex-col md:flex-row md:gap-5 items-start">
                         <span className='font-bold roboto-font md:w-32'>Consultant: </span>
-                        <input type="text" onChange={handleOnChange} name='consultant' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1' />
+                        <input type="text" value={data.consultant} onChange={handleOnChange} name='consultant' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1' />
                     </div>
                     <div className="w-full flex flex-col md:flex-row md:gap-5 items-start">
                         <div className='font-bold roboto-font md:w-32 flex items-center gap-1'>Images: {loading && <Spinner/>}</div>
@@ -81,7 +88,8 @@ const AddProject = ({fetchData}) => {
                     </div>
                     <div className="w-full flex flex-col md:flex-row md:gap-5 items-start">
                         <span className='font-bold roboto-font md:w-32'>Completed: </span>
-                        <select onChange={handleOnChange} name='completed' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1'>
+                        <select value={data.completed} onChange={handleOnChange} name='completed' required className='w-full border border-gray-400 rounded focus:outline-[#007EF6] focus:outline p-1'>
+                            <option value="">Select</option>
                             <option value="true">Yes</option>
                             <option value="false">No</option>
                         </select>

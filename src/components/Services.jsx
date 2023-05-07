@@ -176,9 +176,24 @@ At 3D, we voluntarily deploy a value-engineering approach to meet the needs of c
               </div>
             </div>
           </li>
+          <li className=''>
+            <h2 className='border-b-2 border-[#E60304] sticky md:top-[81px] top-[57px] bg-white pt-[9px] flex items-center'>
+              <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 7. Glass Work</span>
+            </h2>
+            <div className="w-full flex flex-col-reverse md:flex-row">
+              <div className="w-full flex flex-col md:w-[65%]">
+                <p className="open-sans-font mt-4 text-justify">
+                Outfit your home or office with all products of aluminum and glass, sheer curtain Dubai. Make gorgeous entryways or shops that reflect your sense of style. Your home or company will transform with a wide range of colors, styles, and accessory options. We are providing a full line of services for homes and buildings in Dubai. The structures that societies create reflect their culture and style. Commercial structures are inspiring and impactful buildings that define modern culture. Although, our Glass and Aluminum Company in UAE expert team provide precise and comprehensive solutions for all commercial glass and aluminum projects. You can rely on us to provide the highest quality glazing services. However, we provide all types of glass and aluminum product services and sheer curtains in Dubai.
+                </p>
+              </div>
+              <div className="w-full flex justify-center md:w-[35%] my-4">
+                <img src="/images/gw.jpg" className='w-1/2 object-contain' alt="" />
+              </div>
+            </div>
+          </li>
           <li className='md:-mb-10'>
             <h2 className='border-b-2 border-[#E60304] sticky md:top-[81px] top-[57px] bg-white pt-[9px] flex items-center'>
-              <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 7.  Real Estate Management Supervision Services</span>
+              <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 8.  Real Estate Management Supervision Services</span>
             </h2>
             <div className="w-full flex flex-col-reverse md:flex-row">
               <div className="w-full flex flex-col md:w-[65%]">
@@ -193,7 +208,7 @@ Our real estate management supervision services are designed to help you manage 
           </li>
           <li>
             <h2 className='border-b-2 border-[#E60304] sticky md:top-[81px] top-[57px] bg-white pt-[9px] flex items-center'>
-              <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 8.   Real Estate Buying & Selling Brokerage</span>
+              <span className="font-bold roboto-font uppercase bg-[#E60304] text-white p-2"> 9.   Real Estate Buying & Selling Brokerage</span>
             </h2>
             <div className="w-full flex flex-col-reverse md:flex-row">
               <div className="w-full flex flex-col md:w-[65%]">

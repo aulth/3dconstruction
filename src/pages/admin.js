@@ -58,7 +58,7 @@ const add = ({ allProjects }) => {
     var data = await response.json();
     if (data.success) {
       data = data.projects;
-      setData(data.reverse());
+      setData(data);
     } else {
       data = "";
     }
