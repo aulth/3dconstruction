@@ -32,6 +32,7 @@ const projectspage = ({ data }) => {
 export default projectspage
 export async function getServerSideProps(context) {
   const response = await fetch('http://www.3dconstractionllc.com/api/fetchall')
+  console.log(response)
   var data = await response.json();
   if (data.success) {
     data = data.projects;

@@ -10,7 +10,7 @@ const Umbrella = () => {
         <>
             <div className="w-full flex justify-center items-center flex-col gap-4 bg-[#F4F6F8] p-5 py-8">
                 <h3 className="font-bold roboto-font text-3xl">3D Umbrella</h3>
-                <ul class="grid grid-cols-2 gap-4  open-sans-font">
+                <ul clasNames="grid grid-cols-2 gap-4  open-sans-font">
                     <li className='flex items-start  gap-1'><IoUmbrellaOutline className='text-[#E60304] text-lg mt-1 shrink-0' />3D Constraction LLC - Dubai HO</li>
                     <li className='flex items-start  gap-1'><IoUmbrellaOutline className='text-[#E60304] text-lg mt-1 shrink-0' />3D Constraction LLC - Abu Dhabi</li>
                     <li className='flex items-start  gap-1'><IoUmbrellaOutline className='text-[#E60304] text-lg mt-1 shrink-0' />3D Constraction LLC - Sharjah</li>

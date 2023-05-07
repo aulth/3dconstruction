@@ -110,7 +110,7 @@ const ProductPage = ({ data }) => {
 export default ProductPage
 export async function getServerSideProps(context) {
     const { slug } = context.params
-    const response = await fetch('http://www.3dconstractionllc.com/api/fetchone', {
+    const response = await fetch('https://www.3dconstractionllc.com/api/fetchone', {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
