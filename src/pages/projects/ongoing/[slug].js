@@ -79,7 +79,7 @@ const ProductPage = ({ data, thumbnail }) => {
                                 <Slider {...settings} ref={(slider) => setSlider(slider)}>
                                     {images.map((image, index) => (
                                         <div key={index} className='w-full md:h-[calc(100vh-69px)]'>
-                                            <img src={image} className='w-full object-cover aspect-video' />
+                                            <img src={image} className='w-full object-contain aspect-video' />
                                         </div>
                                     ))}
                                 </Slider>
