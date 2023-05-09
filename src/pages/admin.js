@@ -58,6 +58,7 @@ const add = ({ allProjects }) => {
     var data = await response.json();
     if (data.success) {
       data = data.projects;
+      data.sort((a, b) => a.priority - b.priority)
       setData(data);
     } else {
       data = "";
@@ -77,7 +78,7 @@ const add = ({ allProjects }) => {
       <div className="bg-[rgb(248,250,252)] w-full md:min-h-[calc(100vh-81px-72px)] min-h-[calc(100vh-57px)]">
         <div className="container m-auto px-4 py-4 md:px-12  relative">
           {
-            !authorized &&
+            authorized &&
             <form onSubmit={verifyAdmin} className="m-auto w-full md:w-80 flex flex-col gap-4 p-4">
               <h2 className="font-semibold text-center">Admin Password</h2>
               <input type="text" placeholder='Pin' id='pin' className='w-full p-1 focus:border-cyan-400 focus:outline-none border-b border-gray-200' required />
@@ -85,13 +86,13 @@ const add = ({ allProjects }) => {
             </form>
           }
           {
-            authorized &&
+            !authorized &&
             <>
               <AddProject fetchData={fetchData} />
               <div className='flex   flex-col   gap-4'>
                 {data && data.length > 0 &&
                   data.map((data, index) => {
-                    return <ProjectItem updateStatus={updateStatus} deleteProject={deleteProject} data={data} key={index} />
+                    return <ProjectItem updateStatus={updateStatus} fetchData={fetchData} setProducts={setData} products={allProjects} deleteProject={deleteProject} data={data} key={index} />
                   })
                 }
               </div>
@@ -110,6 +111,7 @@ export async function getServerSideProps(context) {
   var data = await response.json();
   if (data.success) {
     data = data.projects;
+    data.sort((a, b) => a.priority - b.priority)
   } else {
     data = "";
   }

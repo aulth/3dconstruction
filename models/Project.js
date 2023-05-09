@@ -4,7 +4,8 @@ const Project  = new mongoose.Schema({
     area:String,
     consultant:String,
     images:Array,
-    completed:Boolean
+    completed:Boolean,
+    priority:Number
 },{timestamps:true})
 
 mongoose.models={};

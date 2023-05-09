@@ -9,13 +9,16 @@ export default async function handler(req, res) {
     console.log(req.body)
     const { data } = req.body;
     console.log(data);
+    const preProjects = await Project.find({});
+    
     try {
         const newProject = await Project.create({
             project: data.project,
             area: data.area,
             consultant: data.consultant,
             images: data.images,
-            completed:data.completed
+            completed:data.completed,
+            priority:preProjects.length+1
         })
         if (!newProject) {
             return res.json({ success: false, msg: "Project Not Added" })
