@@ -12,7 +12,7 @@ import Footer from '@/components/Footer'
 import Head from 'next/head'
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <>
       <Head>
@@ -28,9 +28,35 @@ export default function Home() {
       <MissionVision />
       <Capabilities />
       <OurServices />
-      <Stats />
+      <Stats data={data} />
       <Umbrella />
       <Footer />
     </>
   )
+}
+export async function getServerSideProps(context) {
+  const response = await fetch('https://www.3dconstractionllc.com/api/fetchall')
+  var data = await response.json();
+  let completed = 0;
+  let ongoing = 0;
+  if (data.success) {
+    data = data.projects;
+    data.forEach(element => {
+      if(element.completed){
+        completed++;
+      }else{
+        ongoing++;
+      }
+    });
+  } else {
+    data = "";
+  }
+  return {
+    props: {
+      data: {
+        completed:completed,
+        ongoing:ongoing
+      }
+    }, // will be passed to the page component as props
+  }
 }

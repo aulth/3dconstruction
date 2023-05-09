@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 
-const Stats = () => {
+const Stats = ({data}) => {
     useEffect(() => {
         if (typeof window != undefined) {
             const myElement = document.querySelector('#stats');
-
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -12,9 +11,9 @@ const Stats = () => {
                         let employee = document.querySelector('#employee')
                         let completed = document.querySelector('#completed')
                         let ongoing = document.querySelector('#ongoing')
-                        updateNumber(employee, 600, 1);
-                        updateNumber(completed, 42, 1);
-                        updateNumber(ongoing, 12, 1);
+                        updateNumber(employee, 600, 15);
+                        updateNumber(completed, data.completed, 1);
+                        updateNumber(ongoing, data.ongoing, 1);
                     } else {
                         // Element is not in the window view
                     }
