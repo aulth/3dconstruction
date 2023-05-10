@@ -48,7 +48,8 @@ const ProjectsCategory = ({data}) => {
                     <div className="flex items-center gap-2">
                         {/* <button onClick={toggleCompleted} id='completed-btn' className="px-3 filter-btn py-1.5 border rounded-sm border-gray-400">Completed</button>
                         <button onClick={toggleOngoing}  id='ongoing-btn'  className="px-3 filter-btn py-1.5  border rounded-sm border-gray-400">Ongoing</button> */}
-                        <span className="font-semibold text-xl">{data && data.length}</span>
+                        {/* <span className="font-semibold text-xl">{data && data.length}</span> */}
+                        <span className="font-semibold text-xl"></span>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-5 pt-2" xyz="fade down stagger ease-out-back">

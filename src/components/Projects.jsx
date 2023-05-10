@@ -42,7 +42,7 @@ const Projects = ({ data }) => {
                 <div className=" flex flex-col justify-start items-start w-full md:w-1/2 md:pt-10 p-2">
                     <h2 className="text-4xl leading-tight roboto-font font-bold uppercase md:text-left text-center">Crafting exceptional spaces through quality projects.</h2>
                     <p className="open-sans-font text-gray-600 p-5 md:p-0 my-2 md:text-left text-center">
-                    We've completed 42+ projects and have ongoing work. Our team delivers quality work for commercial and residential projects with attention to detail. Let's work together.
+                    We've completed many projects and have ongoing work. Our team delivers quality work for commercial and residential projects with attention to detail. Let's work together.
                     </p>
                     <div className="w-full flex flex-col md:flex-row gap-4 md:px-0 px-5 my-5">
                         <Link href="/projects/completed"><button className="bg-[#E10606] text-white font-semibold rounded px-3 py-1 uppercase">Explore Completed Projects</button></Link>
