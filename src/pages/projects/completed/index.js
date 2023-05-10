@@ -37,6 +37,7 @@ export async function getServerSideProps(context) {
   if (data.success) {
     data = data.projects;
     data = data.filter((item => item.completed))
+    data.sort((a, b) => a.priority - b.priority)
   } else {
     data = "";
   }
